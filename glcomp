@@ -1,6 +1,5 @@
 #!/bin/bash
-# g++ HelloRandomColor.o -o HelloRandomColor.exec -lGL -lGLU -lglfw3 -lX11 -lXxf86vm -lXrandr -lpthread -lXi -ldl -lXinerama -lXcursor -lGLEW
-# g++ -std=c++11 -c HelloRandomColor.cpp
+
 filename=$(basename "$1")
 g++ -std=c++11 -c "$filename"
 g++ "${filename%.*}".o -o "${filename%.*}".exec -lGL -lGLU -lglfw3 -lX11 -lXxf86vm -lXrandr -lpthread -lXi -ldl -lXinerama -lXcursor -lGLEW
